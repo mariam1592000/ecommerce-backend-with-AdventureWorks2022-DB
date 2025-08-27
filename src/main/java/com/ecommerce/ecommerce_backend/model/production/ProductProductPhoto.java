@@ -21,7 +21,7 @@ public class ProductProductPhoto {
     private Product product;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ProductPhotoID", referencedColumnName = "productPhotoId", insertable = false, updatable = false)
+    @JoinColumn(name = "ProductPhotoID", referencedColumnName = "ProductPhotoID", insertable = false, updatable = false)
     private ProductPhoto productPhoto;
 
     @Column(name = "Primary", nullable = false)

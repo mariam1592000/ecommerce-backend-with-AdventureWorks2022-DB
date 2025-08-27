@@ -1,11 +1,15 @@
 package com.ecommerce.ecommerce_backend.model.person.compositeId;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
 import java.util.Objects;
 
 @Embeddable
+@Getter
+@Setter
 public class BusinessEntityAddressId  implements Serializable {
 
     @Column(name = "BusinessEntityID", nullable = false)
@@ -16,31 +20,6 @@ public class BusinessEntityAddressId  implements Serializable {
 
     @Column(name = "AddressTypeID", nullable = false)
     private int addressTypeID;
-
-    public int getBusinessEntityID() {
-        return businessEntityID;
-    }
-
-    public void setBusinessEntityID(int businessEntityID) {
-        this.businessEntityID = businessEntityID;
-    }
-
-    public int getAddressID() {
-        return addressID;
-    }
-
-    public void setAddressID(int addressID) {
-        this.addressID = addressID;
-    }
-
-    public int getAddressTypeID() {
-        return addressTypeID;
-    }
-
-    public void setAddressTypeID(int addressTypeID) {
-        this.addressTypeID = addressTypeID;
-    }
-
     // equals & hashCode (required!)
     @Override
     public boolean equals(Object o) {

@@ -1,11 +1,15 @@
 package com.ecommerce.ecommerce_backend.model.person.compositeId;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.Objects;
 
 
 @Embeddable
+@Getter
+@Setter
 public class BusinessEntityContactId {
 
     @Column(name = "BusinessEntityID", nullable = false)
@@ -16,30 +20,6 @@ public class BusinessEntityContactId {
 
     @Column(name = "ContactTypeID", nullable = false)
     private int contactTypeID;
-
-    public int getBusinessEntityID() {
-        return businessEntityID;
-    }
-
-    public void setBusinessEntityID(int businessEntityID) {
-        this.businessEntityID = businessEntityID;
-    }
-
-    public int getPersonID() {
-        return personID;
-    }
-
-    public void setPersonID(int personID) {
-        this.personID = personID;
-    }
-
-    public int getContactTypeID() {
-        return contactTypeID;
-    }
-
-    public void setContactTypeID(int contactTypeID) {
-        this.contactTypeID = contactTypeID;
-    }
 
     // equals & hashCode (required!)
     @Override

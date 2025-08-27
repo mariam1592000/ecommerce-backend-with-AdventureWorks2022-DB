@@ -1,4 +1,4 @@
-package com.ecommerce.ecommerce_backend.model.person;
+package com.ecommerce.ecommerce_backend.model.production;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -10,17 +10,18 @@ import lombok.Setter;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "PhoneNumberType",schema = "Person")
+@Table(name = "Culture", schema = "Production")
 @Getter
 @Setter
-public class PhoneNumberType {
+public class Culture {
     @Id
-    @Column(name = "PhoneNumberTypeID", nullable = false)
-    private int phoneNumberTypeID;
+    @Column(name = "CultureID", nullable = false, columnDefinition = "nchar(10)")
+    private String cultureID;
 
     @Column(name = "Name", nullable = false)
     private String name;
 
     @Column(name = "ModifiedDate")
     private LocalDateTime modifiedDate;
+
 }

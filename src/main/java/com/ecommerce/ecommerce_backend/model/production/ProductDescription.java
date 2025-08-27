@@ -4,12 +4,16 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
 @Table(name = "ProductDescription", schema = "Production")
+@Getter
+@Setter
 public class ProductDescription {
     @Id
     @Column(name = "ProductDescriptionID", nullable = false)
@@ -24,35 +28,4 @@ public class ProductDescription {
     @Column(name = "ModifiedDate")
     private LocalDateTime modifiedDate;
 
-    public int getProductDescriptionID() {
-        return productDescriptionID;
-    }
-
-    public void setProductDescriptionID(int productDescriptionID) {
-        this.productDescriptionID = productDescriptionID;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public UUID getRowGuid() {
-        return rowGuid;
-    }
-
-    public void setRowGuid(UUID rowGuid) {
-        this.rowGuid = rowGuid;
-    }
-
-    public LocalDateTime getModifiedDate() {
-        return modifiedDate;
-    }
-
-    public void setModifiedDate(LocalDateTime modifiedDate) {
-        this.modifiedDate = modifiedDate;
-    }
 }
