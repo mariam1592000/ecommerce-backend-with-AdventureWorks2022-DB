@@ -1,6 +1,6 @@
 package com.ecommerce.ecommerce_backend.model.purchasing;
 
-import com.ecommerce.ecommerce_backend.model.Humanresource.Employee;
+import com.ecommerce.ecommerce_backend.model.humanresource.Employee;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
