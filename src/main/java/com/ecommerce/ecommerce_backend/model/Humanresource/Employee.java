@@ -1,4 +1,4 @@
-package com.ecommerce.ecommerce_backend.model.HumanResource;
+package com.ecommerce.ecommerce_backend.model.Humanresource;
 
 import com.ecommerce.ecommerce_backend.common.enums.GenderEnum;
 import com.ecommerce.ecommerce_backend.common.enums.MaritalStatusEnum;

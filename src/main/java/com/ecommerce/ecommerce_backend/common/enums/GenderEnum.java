@@ -1,5 +1,8 @@
 package com.ecommerce.ecommerce_backend.common.enums;
 
+import lombok.Getter;
+
+@Getter
 public enum GenderEnum {
 
     M("Male"),
@@ -9,10 +12,6 @@ public enum GenderEnum {
 
     GenderEnum(String description) {
         this.description = description;
-    }
-
-    public String getDescription() {
-        return description;
     }
 
 }

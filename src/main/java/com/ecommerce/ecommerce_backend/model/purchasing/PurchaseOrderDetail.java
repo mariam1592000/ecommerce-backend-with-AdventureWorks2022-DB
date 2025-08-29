@@ -1,9 +1,6 @@
 package com.ecommerce.ecommerce_backend.model.purchasing;
 
-import com.ecommerce.ecommerce_backend.model.HumanResource.Employee;
 import com.ecommerce.ecommerce_backend.model.production.Product;
-import com.ecommerce.ecommerce_backend.model.production.UnitMeasure;
-import com.ecommerce.ecommerce_backend.model.purchasing.compositeId.ProductVendorId;
 import com.ecommerce.ecommerce_backend.model.purchasing.compositeId.PurchaseOrderDetailId;
 import jakarta.persistence.*;
 import lombok.Getter;
