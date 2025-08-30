@@ -16,7 +16,7 @@ import java.util.UUID;
 public class Person {
     @Id
     @Column(name = "BusinessEntityID", nullable = false)
-    private Integer businessEntityID;
+    private int businessEntityID;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "PersonType", length = 2,  columnDefinition = "nchar(2)")

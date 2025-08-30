@@ -1,5 +1,6 @@
 package com.ecommerce.ecommerce_backend.model.person;
 
+import com.ecommerce.ecommerce_backend.model.sales.SalesTerritory;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -29,9 +30,9 @@ public class StateProvince {
     @Column(name = "Name", nullable = false)
     private String name;
 
-    //there is a relationship with the SalesTerritory in the Sales package
-    @Column(name = "TerritoryID")
-    private int territoryID;
+    @ManyToOne
+    @JoinColumn(name = "TerritoryID", referencedColumnName = "TerritoryID")
+    private SalesTerritory salesTerritory;
 
     @Column(name = "rowguid", columnDefinition = "uniqueidentifier")
     private UUID rowGuid;
