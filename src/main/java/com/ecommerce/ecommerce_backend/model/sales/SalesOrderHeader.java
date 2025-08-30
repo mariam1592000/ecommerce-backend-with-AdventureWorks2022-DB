@@ -46,9 +46,6 @@ public class SalesOrderHeader {
 
     @Column(name = "AccountNumber")
     private String accountNumber;
-
-    @Column(name = "CustomerID", nullable = false)
-    private int customerId;
     
     @ManyToOne
     @JoinColumn(name = "CustomerID", referencedColumnName = "CustomerID")
