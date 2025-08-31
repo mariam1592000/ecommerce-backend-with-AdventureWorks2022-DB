@@ -21,7 +21,7 @@ public class SalesOrderHeader {
     private int salesOrderId;
 
     @Column(name = "RevisionNumber", nullable = false)
-    private Byte revisionNumber;
+    private short revisionNumber;
 
     @Column(name = "OrderDate", nullable = false)
     private LocalDateTime orderDate;
