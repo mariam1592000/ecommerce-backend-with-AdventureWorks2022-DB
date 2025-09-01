@@ -2,6 +2,8 @@ package com.ecommerce.ecommerce_backend.model.production;
 
 import com.ecommerce.ecommerce_backend.common.enums.ProductClassEnum;
 import com.ecommerce.ecommerce_backend.common.enums.ProductLineEnum;
+import com.ecommerce.ecommerce_backend.common.enums.ProductStyleEnum;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -51,11 +53,11 @@ public class Product {
     @Column(name = "Size")
     private String size;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "SizeUnitMeasureCode", referencedColumnName = "UnitMeasureCode")
     private UnitMeasure sizeUnitMeasureCode;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "WeightUnitMeasureCode", referencedColumnName = "UnitMeasureCode")
     private UnitMeasure weightUnitMeasureCode;
 
@@ -75,7 +77,7 @@ public class Product {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "Style", columnDefinition = "nchar(2)")
-    private ProductClassEnum style;
+    private ProductStyleEnum style;
 
     @ManyToOne
     @JoinColumn(name = "ProductSubcategoryID", referencedColumnName = "ProductSubcategoryID")
@@ -101,6 +103,7 @@ public class Product {
     private LocalDateTime modifiedDate;
 
     @OneToMany(orphanRemoval = true, mappedBy = "product")
+    @JsonIgnore
     private List<ProductProductPhoto> productProductPhotoList = new ArrayList<>();
 
 }

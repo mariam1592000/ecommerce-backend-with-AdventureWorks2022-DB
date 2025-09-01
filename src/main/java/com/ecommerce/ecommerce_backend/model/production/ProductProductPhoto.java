@@ -18,13 +18,14 @@ public class ProductProductPhoto {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ProductID", referencedColumnName = "ProductID", insertable = false, updatable = false)
+    //@JsonBackReference // this prevents the recursion that happens when I get the product list it has the photo and the photo has a product reference field
     private Product product;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ProductPhotoID", referencedColumnName = "ProductPhotoID", insertable = false, updatable = false)
     private ProductPhoto productPhoto;
 
-    @Column(name = "Primary", nullable = false)
+    @Column(name = "[Primary]", nullable = false)
     private boolean primary;
 
     @Column(name = "ModifiedDate", nullable = false)

@@ -1,15 +1,19 @@
 package com.ecommerce.ecommerce_backend.model.production.compositeId;
 
 import jakarta.persistence.*;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Objects;
+import java.io.Serializable;
 
 @Embeddable
 @Getter
 @Setter
-public class ProductProductPhotoId {
+@NoArgsConstructor
+@EqualsAndHashCode
+public class ProductProductPhotoId implements Serializable {
 
 
     @Column(name = "ProductID")
@@ -25,17 +29,17 @@ public class ProductProductPhotoId {
     }
 
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof ProductProductPhotoId)) return false;
-        ProductProductPhotoId that = (ProductProductPhotoId) o;
-        return Objects.equals(productId, that.productId) &&
-                Objects.equals(productPhotoID, that.productPhotoID);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(productId, productPhotoID);
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (!(o instanceof ProductProductPhotoId)) return false;
+//        ProductProductPhotoId that = (ProductProductPhotoId) o;
+//        return Objects.equals(productId, that.productId) &&
+//                Objects.equals(productPhotoID, that.productPhotoID);
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(productId, productPhotoID);
+//    }
 }
