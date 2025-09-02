@@ -37,4 +37,18 @@ public class ProductServiceImpl implements ProductService {
         return product.map(ProductDTO::new).orElse(null);
     }
 
+    @Override
+    public List<ProductDTO> findByProductCategoryID(int productCategoryId) {
+
+        List<Product> productList = productRepository.findByProductCategoryID(productCategoryId);
+        if(!productList.isEmpty())
+        {
+            return productList
+                    .stream()
+                    .map(ProductDTO::new)
+                    .collect(Collectors.toList());
+        }
+        return null;
+    }
+
 }

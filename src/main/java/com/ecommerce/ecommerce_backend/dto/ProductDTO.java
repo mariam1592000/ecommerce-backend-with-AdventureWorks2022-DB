@@ -22,6 +22,7 @@ public class ProductDTO {
     private String ProductClass;
     private String style;
     private String productSubcategory;
+    private String productCategory;
     private String ProductModelID;
 //    private List<ProductProductPhoto> productProductPhotoList = new ArrayList<>();
 
@@ -41,5 +42,6 @@ public class ProductDTO {
         this.ProductClass = product.getProductClass() != null ? product.getProductClass().getDescription() : null;
         this.productSubcategory = product.getProductSubcategoryID() != null ? product.getProductSubcategoryID().getName() : null;
         this.ProductModelID = product.getProductModelID() != null ? product.getProductModelID().getName() : null;
+        this.productCategory = product.getProductSubcategoryID() != null ? product.getProductSubcategoryID().getProductCategoryID().getName() : null;
     }
 }

@@ -9,5 +9,7 @@ public interface ProductService {
 
     List<ProductDTO> FindAllProduct();
 
-    ProductDTO FindProductById(int productId);
+    ProductDTO FindProductById(int productCategoryId);
+
+    List<ProductDTO> findByProductCategoryID(int productCategoryId);
 }

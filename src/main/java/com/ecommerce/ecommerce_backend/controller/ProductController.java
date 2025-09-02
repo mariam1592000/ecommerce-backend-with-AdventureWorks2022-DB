@@ -32,4 +32,9 @@ public class ProductController {
         return productService.FindProductById(productId);
     }
 
+    @RequestMapping(value = APIPath.Product + APIPath.Category, method = RequestMethod.GET)
+    public List<ProductDTO> findByProductCategoryID(@RequestParam int productCategoryId)
+    {
+        return productService.findByProductCategoryID(productCategoryId);
+    }
 }

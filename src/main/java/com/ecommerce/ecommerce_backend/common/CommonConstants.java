@@ -10,6 +10,7 @@ public final class CommonConstants {
         public static final String AuthenticatedPerm = "/me";
         public static final String Order = "/order";
         public static final String Product = "/product";
+        public static final String Category = "/category";
         public static final String FindProductById = "/productById";
         public static final String FindOrderByUser = "/findOrderByUser";
         public static final String FindAllProduct = "/findAllProduct";
